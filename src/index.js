@@ -7,6 +7,11 @@ app = express()
 app.use(express.json())
 app.use(routes)
 
+//Message default
+app.get("/", (req, res) => {
+  res.json({ message: "Hi not use this API, please :P " })
+})
+
 const PORT = process.env.PORT || 3000
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`
