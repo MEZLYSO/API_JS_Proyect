@@ -2,6 +2,6 @@ const { Router } = require('express')
 const userRoutes = Router()
 const userController = require('../constrollers/userController')
 
-userRoutes.get("/", userController.loginUser)
+userRoutes.post("/auth", userController.loginUser)
 
 module.exports = userRoutes
