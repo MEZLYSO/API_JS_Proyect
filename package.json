@@ -2,6 +2,7 @@
   "name": "api_js_proyect",
   "version": "1.0.0",
   "description": "",
+  "type": "commonjs",
   "scripts": {
     "dev": "nodemon ./src/index.js",
     "start": "node ./src/index.js"
@@ -9,9 +10,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
