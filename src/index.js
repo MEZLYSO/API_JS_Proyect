@@ -8,6 +8,8 @@ app.get("/", (req, res) => {
   res.json({ message: "Hi" })
 })
 
-app.listen(3000, () => {
-  console.log("Serive running in port 3000")
+
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+  console.log(`Serive running in port ${PORT}`)
 })
