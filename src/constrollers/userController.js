@@ -6,12 +6,11 @@ class userController {
     try {
       const { username, password } = req.body
       const user = await userService.getUser(username, password)
-      if (!user) {
+      if (user) {
         sendSucess(res, user)
       } else {
-        sendError(res, "Not Found User", 500)
+        sendError(res, "Not Found", 500)
       }
-
     } catch (error) {
       sendError(res, error.message, 500)
     }
