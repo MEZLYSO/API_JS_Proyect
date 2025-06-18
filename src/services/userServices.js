@@ -9,6 +9,16 @@ class userService {
       return null
     }
   }
+
+  async getTimeCareer(id) {
+    const times = await db.query("SELECT * FROM TimeResults WHERE IDParticipant=?", [id])
+    if (times.length > 0) {
+      return times
+    } else {
+      return null
+    }
+  }
+
 }
 
 module.exports = new userService()
