@@ -1,5 +1,6 @@
 const { sendError, sendSucess } = require('../utils/requestHandlers.js')
 const userService = require('../services/userServices')
+const TimeRequest = require('../utils/TimeRequest.js')
 
 class userController {
   async loginUser(req, res) {
@@ -21,7 +22,7 @@ class userController {
       const { id } = req.params
       const time = await userService.getTimeCareer(id)
       if (!time) {
-        sendError(res, "Not Found", 500)
+        sendSucess(res, TimeRequest)
       }
       sendSucess(res, time)
     } catch (error) {
