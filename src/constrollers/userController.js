@@ -23,8 +23,9 @@ class userController {
       const time = await userService.getTimeCareer(id)
       if (!time) {
         sendSucess(res, TimeRequest)
+      } else {
+        sendSucess(res, time)
       }
-      sendSucess(res, time)
     } catch (error) {
       sendError(res, error.message, 500)
     }
