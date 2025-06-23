@@ -2,7 +2,7 @@ const mysql = require('mysql2/promise')
 
 const config = {
   host: process.env.HOST,
-  user: "sql10785119",
+  user: "sql10786405",
   password: process.env.PASSWORD,
   database: process.env.DB,
   connectionLimit: 10,
