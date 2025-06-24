@@ -14,7 +14,7 @@ app.get("/", (_req, res) => {
   res.json({ message: "Hi, not use this API, please :P " })
 })
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3001
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`
   ----API SERVER----

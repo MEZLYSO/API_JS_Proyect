@@ -30,6 +30,20 @@ class userController {
       sendError(res, error.message, 500)
     }
   }
+
+  async getTimes(_req, res) {
+    try {
+      const times = await userService.getTimes()
+      if (times) {
+        sendSucess(res, times)
+      } else {
+        sendError(res, "Not Found", 500)
+      }
+    } catch (error) {
+      sendError(res, error.message, 500)
+    }
+  }
+
 }
 
 module.exports = new userController()

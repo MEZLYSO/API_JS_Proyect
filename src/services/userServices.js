@@ -19,6 +19,15 @@ class userService {
     }
   }
 
+  async getTimes() {
+    const times = await db.query("SELECT * FROM Participants p INNER JOIN TimeResults t ON p.IDParticipant = t.IDParticipant")
+    if (times.length > 0) {
+      return times
+    } else {
+      return null
+    }
+  }
+
 }
 
 module.exports = new userService()
